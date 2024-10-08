@@ -28,10 +28,10 @@ const useMnemonicStore = create<MnemonicState>((set) => ({
     addressArr: [],
     currentAddress: '',
     chainIdArr: [{chainId: 1337, chainName: "GANACHE", rpcUrl: process.env.NEXT_PUBLIC_GANACHE_TEST_RPC_URL!},
-        {chainId: 1, chainName: "MAINNET", rpcUrl: process.env.MAINNET_HTTPS_URL!},
-        {chainId: 11155111, chainName: "SEPOLIA", rpcUrl: process.env.SEPOLIA_HTTPS_URL!},
-        {chainId: 17000, chainName: "HOLESKY", rpcUrl: process.env.HOLESKY_HTTPS_URL!},
-        {chainId: 56, chainName: "BSC", rpcUrl: process.env.BSC_HTTPS_URL!}
+        {chainId: 1, chainName: "MAINNET", rpcUrl: process.env.NEXT_PUBLIC_MAINNET_WSS_URL!},
+        {chainId: 11155111, chainName: "SEPOLIA", rpcUrl: process.env.NEXT_PUBLIC_SEPOLIA_WSS_URL!},
+        {chainId: 17000, chainName: "HOLESKY", rpcUrl: process.env.NEXT_PUBLIC_HOLESKY_WSS_URL!},
+        {chainId: 56, chainName: "BSC", rpcUrl: process.env.NEXT_PUBLIC_BSC_WSS_URL!}
     ],
     currentChainId: {chainId: 11155111, chainName: "SEPOLIA", rpcUrl: process.env.NEXT_PUBLIC_SEPOLIA_WSS_URL!},
     setCurrentChainId: (currentChainId: chainId) => set({ currentChainId }),

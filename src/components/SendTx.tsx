@@ -14,6 +14,7 @@ import useMnemonicStore from "@/lib/mnemonicStore";
 import { parseEther } from "ethers";
 import { Wallet } from "ethers";
 import { JsonRpcProvider } from "ethers";
+import { WebSocketProvider } from "ethers";
 
 const SendTx = () => {
   const [receiver, setReceiver] = useState<string>("");
@@ -36,8 +37,8 @@ const SendTx = () => {
         return;
       }
       
-      let provider = new JsonRpcProvider(currentChainId.rpcUrl);
-      
+      let provider = new WebSocketProvider(currentChainId.rpcUrl);
+      console.log("nun udnu ernave : ", currentChainId)
       const wallet = new Wallet(
         addressArr[
           addressArr.findIndex((x) => x.address === currentAddress)
@@ -60,7 +61,7 @@ const SendTx = () => {
         txDetails = {
           ...txDetails,
           // @ts-ignore
-          gasPrice: 671118348,
+          gasPrice: 766308394,
         }
       }
       console.log("Infnfnfnf: ", txDetails)
